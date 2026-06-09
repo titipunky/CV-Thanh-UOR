@@ -1,0 +1,276 @@
+<!-- Nom ....... : index.html-->
+<!-- Rôle ...... : realisation de mon CV -->
+<!-- Auteur .... : Thien Thanh NGUYEN -->
+<!-- Licence ... : Réalisé dans le cadre du chapitre 2 de UOR -->
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<!-- meta description -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Je suis Thanh NGUYEN, decouvrez mon parcours et mes compétences.">
+
+		<!-- meta robot -->
+  		<meta name="robots" content="noindex"> <!-- ne pas indexer la page courante-->
+  		<meta name="robots" content="noimageindex"> <!-- ne pas indexer les images de la page-->
+
+		<title>CV Thanh</title> 
+   		
+   		<!-- Open Graph Data -->
+   		<meta property="og:type" content="CV"> <!-- le type de contenu -->
+  		<meta property="og:title" content="Thanh NGUYEN"> <!-- titre de la page-->
+	    <meta property="og:description" content="Venez découvrir mon parcours professionnel et mes passions."> <!--description-->
+    	<meta property="og:url" content="http://cv-thanh-if.atwebpages.com/index.html"><!-- URL de la page-->
+        <!-- LD JSON -->
+        <script type="application/ld+json">{
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "name": "Thien Thanh NGUYEN",
+            "jobTitle": "Senior Trader",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Banque Internationale à Luxembourg (BIL)"
+                },
+            "alumniOf": "Université Paris 8 - IED",
+            "email": "thien-thanh.nguyen@hotmail.fr",
+            "telephone": "06 37 55 64 03",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "65 Chemin du Coteau",
+                "postalCode": "57100",
+                "addressLocality": "Thionville",
+                "addressCountry": "France"
+                }
+        }</script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Thien Thanh NGUYEN</h1>
+        	<p> <strong>Qui suis je ? </strong></p> <!-- paragraphe en gras pour donner une accentuation a la question -->
+        	<p> Passionné, ouvert d'esprit et curieux du monde, j'aime découvrir et apprendre tous les jours.</p>
+
+        	<p> <strong>Ma devise</strong> : <em>Une journée sans apprendre de nouvelles choses est une journée de perdue !</em> </p>
+
+    </header>
+
+    <nav> <!-- ici j'ai voulu faire une table des matieres avec des liens hypertextes -->
+
+        <ul>
+            <li><a href="#experiences-professionnelles">Expériences professionnelles</a></li>
+
+            <li><a href="#competences">Compétences</a></li>
+
+            <li><a href="#formations">Formations</a></li>
+
+            <li><a href="#passions">Passions</a></li>
+
+            <li><a href="#autres">Autres</a></li>
+
+            <li><a href="#video">Vidéo</a></li>
+
+            <li><a href="cv_style.html">version CSS</a></li>
+
+            <li><a href="cv_bootstrap.html">version Bootstrap</a></li>
+
+            <li><a href="http://cv-thanh-if.atwebpages.com/livre_dor.php">Livre d'or</a></li>
+
+            <li><a href="cv_interactif.html">CV Interactif</a></li>
+        </ul>
+
+    </nav>
+
+    <section id="experiences-professionnelles">
+
+        <h2>Expériences professionnelles</h2>
+        <ul> <!-- utilisation d'un liste non ordonnee-->
+        <li><a href="https://www.bil.com/en/Pages/index.aspx">Banque International à Luxembourg</a> - <em>Luxembourg</em>
+        <p>Depuis Avril 2016 : <u><em>Senior Trader</em></u></p> <!-- utilisation de balise semantique pour mettre en évidence le texte-->
+        <p>Modélisation, conception d'algorithmes d'auto-trading sur MT4
+           Trading Spot - Option Trading, Swap et Produits structurés
+           Responsable la plateforme Reuters Electronic Trading
+           Pricing Warrant Lux et Belges, Bonds
+           Mise en euvre de projets comme Ullink </p>
+        </li>
+        
+        <li><a href="https://fac-droit.univ-lorraine.fr/">Faculté de Droit et de Sciences Economiques</a> - <em>Nancy - France</em>
+        <p>Années 2016-2017 : <u><em>Enseignant vacataire</em></u></p>
+        <p>Intervenant pour le cours <em>"Economie des marchés dérivés (application)"</em> </p>
+        </li>
+
+       <li><a href="https://www.bil.com/en/Pages/index.aspx">Banque International à Luxembourg</a> - <em>Luxembourg</em>
+        <p>Octobre 2015/ Mars 2016 : <u><em>Stagiaire Treasury & Financial Market</em></u></p>
+  		<p>Modélisation, conception d'algorithmes d'auto-trading sur MT4
+           Trading Spot - Option Trading et Swap</p>
+        </li>
+		
+        <li><a href="https://iecl.univ-lorraine.fr/">Institut Elie Cartan</a> - <em>Nancy/France</em>   
+        <p>Mars 2015/ Juillet 2015 : <u><em>Stagiaire en recherche mathématiques financières</em></u></p>
+  		<p>Recherche sur les mouvements Browniens Multifractionnaires appliqués au modèle de Black&Scholes</p>
+        </li>
+		<li>Bar Cosmopolitain - <em>Nancy/France</em>
+        <p>2013 - 2016 : <u><em>Gérant</em></u></p>
+  		<p>Création de l'entreprise, comptabilité, gestion des employés et des stocks, recrutement.</p>
+        </li>
+
+  		<li>Restaurant Cosmopolitain - <em>Nancy/France</em>
+        <p>2010 - 2015 : <u><em>Co-Gérant de l'entreprise familiale et agent polyvalent</em></u></p>
+  		<p>Gestion des stocks et des employés - Service en salle et aide cuisinier</p>
+        </li>
+  		</ul>
+        <!-- Tableau recapitulatif -->
+
+        <table>
+        	<caption> <u><strong>Tableau recapitulatif </strong></u></caption> <!-- cree un titre-->            
+
+            <tr> <!-- cree une ligne-->
+                <th>Poste</th> <!-- cree une cellule d'en tete-->
+                <th>Entreprise</th>
+                <th>Années</th>
+            </tr>
+
+            <tr>
+                <td>Senior Trader</td> <!-- cree une cellule standard dans le tableau-->
+                <td>BIL</td>
+                <td>Depuis 2016</td>
+            </tr>
+
+            <tr>
+                <td>Enseignant Vacataire</td>
+                <td>Université de Lorraine</td>
+                <td>2016-2017</td>
+            </tr>
+
+            <tr>
+                <td>Stagiaire</td>
+                <td>BIL</td>
+                <td>2015-2016</td>
+            </tr>
+
+            <tr>
+                <td>Stagiaire</td>
+                <td>Institut Elie Cartan</td>
+                <td>2015</td>
+            </tr>
+
+            <tr>
+                <td>Gérant</td>
+                <td>Bar Cosmopolitain</td>
+                <td>2013-2016</td>
+            </tr>
+
+            <tr>
+                <td>Co-gérant</td>
+                <td>Restaurant Cosmopolitain</td>
+                <td>2010-2015</td>
+            </tr>
+
+        </table>
+
+    </section>
+	    <section id="competences">
+
+        <h2>Compétences</h2>
+
+        <ul><!-- liste pas ordonnee-->
+
+            <li><strong>Savoir-faire</strong> :
+            	<ul>
+            		<li>Analyse économique(fondamentale et chartiste) des marchés financiers</li>
+            		<li>Comprendre et analyser le risque de marché</li>
+            		<li>Lire, comprendre et travailler sur des macros</li>
+            		<li>Concevoir un business plan</li>
+            		<li>Améliorer des processus</li>
+            		<li>Gérer un budget</li>
+            		<li>Animer une réunion de travail</li>
+            	</ul>
+            </li> 
+            <li><strong>Outils</strong> :
+            	<ul>
+            		<li>Pack office</li>
+            		<li>Reuter Eikon/Bloomberg</li>
+            		<li>Kondor+/Business objet</li>
+            		<li>Notion en programmation : C, R, VBA, CSS/HTML, Python</li>
+            	</ul>
+            </li>
+        </ul>
+
+    </section>
+    	<section id="formations">
+
+    		<h2>Formations</h2>
+
+    		<ol> <!--utilisation d'une liste ordonnée -->
+    			<li> <strong>2013 - 2015</strong> : Master Finance - <em>Option ingénierie de la finance</em></li>
+    			
+    			<li> <strong>2010 - 2013</strong> : Licence Science Economique -<em>Option Analyse Economique</em></li>
+    			
+    			<li> <strong>2009 - 2010</strong> : Licence Mathématiques et Informatique</li>
+    		</ol>
+
+	</section>
+
+    <section id="passions">
+        <h2>Passions</h2>
+
+        <p>Ma grande passion est le sport, j'en ai pratiqué plusieurs depuis mon enfance comme le football, le volleyball ou encore les arts martiaux (judo et taekwendo).</p>
+        <p>J'ai également fondé avec des amis, une équipe de football(le club de AS Velaine en Haye), j'étais responsable des entrainements et de la trésorerie. </p>
+        <p>En commençant mes grandes études, le temps m'a manqué et j'ai donc commencé la course à pied ! J'ai fait plusieurs marathons comme celui de Paris et par la suite je me suis mis au triathlon (j'appelle çà le sport des athlètes "moyen", comme on n'est pas bon dans un, pourquoi ne pas l'être sur trois !). 
+        Et j'ai réalisé un de mes défis (parmi tant d'autres), je peux dire que je suis un <strong>"IRONMAN"</strong> ! 
+    	Même si le temps n'est pas le meilleur, je suis arrivé au bout et je suis fier de moi et de la persévérance que j'ai eu, ainsi que de ma compagne qui m'a suivi tout le long de ma préparation et du parcours !</p>
+
+    	<figure>
+        <img src="Finish_line.jpg" title="I am an IRONMAN" alt="Finish line Ironman de Nice 2024" width="300" height="500"> 
+        <img src="Medaille.jpg" alt="Médaille !" width="300" height="500">
+        <figcaption>Finish Line Ironman 2024</figcaption>
+    	</figure>
+
+    	<p>J'ai également d'autres hobbies comme l'entreprenariat, les sciences(mathématiques et physiques)</p>
+
+    	<p>J'ai également un chat noir (pour moi cela porte chance haha)</p>
+    	<figure>
+    		<img src="Happy.jpeg" alt="Happy la bête des Vosges" width="300" height="500">
+    		<figcaption>Bonjour ! Je suis Happy Miaou &#128008; </figcaption>
+    	</figure>
+    </section>
+
+    <section id="autres">
+            <h2>Autres</h2>
+            <ul>
+                <li>Langues :
+                    <ul>
+                    <li><em>Français</em> : langue maternelle</li>
+                    <li><em>Anglais</em> : compétence professionnelle</li>
+                    <li><em>Vietnamien</em> : langue maternelle</li>
+                    </ul>
+                </li>
+                <li>Permis B 🚗 </li>
+                <li>Permis A 🏍 </li>
+            </ul>
+    </section> <hr>
+
+    <section id="video">
+        <h2>Vidéo</h2>
+            <video style="width: 100%; max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" controls>
+            <source src="video.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+    </section>
+
+    <footer>
+        <p><u><strong>Contact </strong></u> :</p>
+        <ul>
+        <li>Email 📧 : <a href="mailto:thien-thanh.nguyen@hotmail.fr">thien-thanh.nguyen@hotmail.fr</a> </li>
+        <li>Téléphone 📱 : 06 37 55 64 03</li>
+        <li>Adresse 🏠 : 65 Chemin du Coteau 57100 Thionville <a href="https://maps.app.goo.gl/HkhhZXBoajNpypkQA" target="_blank">Voir sur la carte</a></li>
+        </ul>
+        <p>Suivez-moi sur <a href="https://www.linkedin.com/in/thanh-nguyen-71548b7b/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+</body>
+
+</html>

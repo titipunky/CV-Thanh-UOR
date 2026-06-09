@@ -1,0 +1,470 @@
+<!-- Nom ....... : cv_interactif.html-->
+<!-- Rôle ...... : CV complet avec JavaScript (Mode sombre, API, Chatbot) -->
+<!-- Auteur .... : Thien Thanh NGUYEN -->
+<!-- Licence ... : Réalisé dans le cadre des chapitres 6 et 7 de UOR -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Je suis Thanh NGUYEN, decouvrez mon parcours et mes compétences.">
+
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="noimageindex">
+
+    <title>CV Thanh - Version Interactive</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+
+    <!-- ajout de la bibliothèque pour les icônes du Chatbot -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- ajout de la bibliothèque jQuery pour faire fonctionner le script du Chatbot -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <meta property="og:type" content="CV">
+    <meta property="og:title" content="Thanh NGUYEN">
+    <meta property="og:description" content="Venez découvrir mon parcours professionnel et mes passions.">
+    <meta property="og:url" content="http://cv-thanh-if.atwebpages.com/cv_interactif.html">
+
+    <!-- exo 2.2 : Métadonnées LD-JSON -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Thien Thanh NGUYEN",
+      "jobTitle": "Senior Trader",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Banque Internationale à Luxembourg (BIL)"
+      },
+      "alumniOf": "Université Paris 8 - IED",
+      "email": "thien-thanh.nguyen@hotmail.fr",
+      "telephone": "06 37 55 64 03",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "65 Chemin du Coteau",
+        "postalCode": "57100",
+        "addressLocality": "Thionville",
+        "addressCountry": "France"
+      }
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="conteneur">
+
+        <div id="header">
+            <h1>Thien Thanh NGUYEN</h1>
+            <p><strong>Qui suis je ? </strong></p>
+            <p>Passionné, ouvert d'esprit et curieux du monde, j'aime découvrir et apprendre tous les jours.</p>
+            <p><strong>Ma devise</strong> : <em>Une journée sans apprendre de nouvelles choses est une journée de perdue !</em></p>
+        </div>
+
+        <div id="menu-lateral">
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Version "HTML"</a></li>
+                    <li><a href="cv_style.html">Version avec CSS </a></li>
+                    <li><a href="cv_bootstrap.html">Version BOOTSTRAP</a></li>
+                    <li><a href="http://cv-thanh-if.atwebpages.com/livre_dor.php">Livre d'or </a></li>
+                    <li><a href="cv_interactif.html" class="actif">CV Interactif</a></li>
+                </ul>
+
+                <div style="text-align: center; margin: 20px;">
+                    <button id="btn-theme" style="padding: 10px 20px; cursor: pointer; font-weight: bold;">
+                        Passer en Mode Sombre
+                    </button>
+                </div>
+
+                <hr>
+                
+                <h3>Sommaire</h3>
+                <ul>
+                    <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#passions">Passions</a></li>
+                    <li><a href="#autres">Autres</a></li>
+                    <li><a href="#video">Vidéo de présentation</a></li>
+                    <li><a href="#opendata">Mes régions de mobilité</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="contenu-principal">
+            
+            <section id="experiences">
+                <h2>Expériences professionnelles</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.bil.com/en/Pages/index.aspx" target="_blank">Banque Internationale à Luxembourg</a> - <em>Luxembourg</em><br>
+                        <span class="date">Depuis Avril 2016 :</span> <span class="poste">Senior Trader</span>
+                        <p>Modélisation, conception d'algorithmes d'auto-trading sur MT4, Trading Spot - Option Trading, Swap et Produits structurés. Responsable la plateforme Reuters Electronic Trading. Pricing Warrant Lux et Belges, Bonds. Mise en œuvre de projets comme Ullink.</p>
+                    </li>
+                    <li>
+                        <a href="https://fac-droit.univ-lorraine.fr/" target="_blank">Faculté de Droit et de Sciences Economiques</a> - <em>Nancy - France</em><br>
+                        <span class="date">Années 2016-2017 :</span> <span class="poste">Enseignant vacataire</span>
+                        <p>Intervenant pour le cours <em>"Economie des marchés dérivés (application)"</em>.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.bil.com/en/Pages/index.aspx" target="_blank">Banque Internationale à Luxembourg</a> - <em>Luxembourg</em><br>
+                        <span class="date">Octobre 2015 / Mars 2016 :</span> <span class="poste">Stagiaire Treasury & Financial Market</span>
+                        <p>Modélisation, conception d'algorithmes d'auto-trading sur MT4, Trading Spot - Option Trading et Swap.</p>
+                    </li>
+                    <li>
+                        <a href="https://iecl.univ-lorraine.fr/" target="_blank">Institut Elie Cartan</a> - <em>Nancy/France</em><br>
+                        <span class="date">Mars 2015 / Juillet 2015 :</span> <span class="poste">Stagiaire en recherche mathématiques financières</span>
+                        <p>Recherche sur les mouvements Browniens Multifractionnaires appliqués au modèle de Black&Scholes.</p>
+                    </li>
+                    <li>
+                        Bar Cosmopolitain - <em>Nancy/France</em><br>
+                        <span class="date">2013 - 2016 :</span> <span class="poste">Gérant</span>
+                        <p>Création de l'entreprise, comptabilité, gestion des employés et des stocks, recrutement.</p>
+                    </li>
+                    <li>
+                        Restaurant Cosmopolitain - <em>Nancy/France</em><br>
+                        <span class="date">2010 - 2015 :</span> <span class="poste">Co-Gérant de l'entreprise familiale et agent polyvalent</span>
+                        <p>Gestion des stocks et des employés - Service en salle et aide cuisinier.</p>
+                    </li>
+                </ul>
+
+                <br>
+
+                <table>
+                    <caption><u><strong>Tableau récapitulatif</strong></u></caption>
+                    <tr>
+                        <th>Poste</th>
+                        <th>Entreprise</th>
+                        <th>Années</th>
+                    </tr>
+                    <tr>
+                        <td>Senior Trader</td>
+                        <td>BIL</td>
+                        <td>Depuis 2016</td>
+                    </tr>
+                    <tr>
+                        <td>Enseignant Vacataire</td>
+                        <td>Université de Lorraine</td>
+                        <td>2016-2017</td>
+                    </tr>
+                    <tr>
+                        <td>Stagiaire</td>
+                        <td>BIL</td>
+                        <td>2015-2016</td>
+                    </tr>
+                    <tr>
+                        <td>Stagiaire</td>
+                        <td>Institut Elie Cartan</td>
+                        <td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>Gérant</td>
+                        <td>Bar Cosmopolitain</td>
+                        <td>2013-2016</td>
+                    </tr>
+                    <tr>
+                        <td>Co-gérant</td>
+                        <td>Restaurant Cosmopolitain</td>
+                        <td>2010-2015</td>
+                    </tr>
+                </table>
+            </section>
+
+            <hr>
+
+            <section id="competences">
+                <h2>Compétences</h2>
+                <ul>
+                    <li><strong>Savoir-faire</strong> :
+                        <ul>
+                            <li>Analyse économique (fondamentale et chartiste) des marchés financiers</li>
+                            <li>Comprendre et analyser le risque de marché</li>
+                            <li>Lire, comprendre et travailler sur des macros</li>
+                            <li>Concevoir un business plan</li>
+                            <li>Améliorer des processus</li>
+                            <li>Gérer un budget</li>
+                            <li>Animer une réunion de travail</li>
+                        </ul>
+                    </li>
+                    <li><strong>Outils</strong> :
+                        <ul>
+                            <li>Pack office</li>
+                            <li>Reuter Eikon/Bloomberg</li>
+                            <li>Kondor+/Business objet</li>
+                            <li>Notions en programmation : C, R, VBA, CSS/HTML, Python</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section id="formations">
+                <h2>Formations</h2>
+                <ol>
+                    <li>
+                        <span class="date">2013 - 2015 :</span> <strong>Master Finance</strong> - <em>Option ingénierie de la finance</em>
+                    </li>
+                    <li>
+                        <span class="date">2010 - 2013 :</span> <strong>Licence Science Economique</strong> - <em>Option Analyse Economique</em>
+                    </li>
+                    <li>
+                        <span class="date">2009 - 2010 :</span> <strong>Licence Mathématiques et Informatique</strong>
+                    </li>
+                </ol>
+            </section>
+
+            <hr>
+            
+            <section id="passions">
+                <h2>Passions</h2>
+                <p>Ma grande passion est le sport, j'en ai pratiqué plusieurs depuis mon enfance comme le football, le volleyball ou encore les arts martiaux (judo et taekwondo).</p>
+                <p>J'ai également fondé avec des amis une équipe de football (le club de AS Velaine en Haye), j'étais responsable des entraînements et de la trésorerie.</p>
+                <p>En commençant mes grandes études, le temps m'a manqué et j'ai donc commencé la course à pied ! J'ai fait plusieurs marathons comme celui de Paris et par la suite je me suis mis au triathlon (j'appelle ça le sport des athlètes "moyens", comme on n'est pas bon dans un, pourquoi ne pas l'être sur trois !). 
+                Et j'ai réalisé un de mes défis (parmi tant d'autres), je peux dire que je suis un <strong>"IRONMAN"</strong> ! 
+                Même si le temps n'est pas le meilleur, je suis arrivé au bout et je suis fier de moi et de la persévérance que j'ai eue, ainsi que de ma compagne qui m'a suivi tout le long de ma préparation et du parcours !</p>
+
+                <figure>
+                    <img src="Finish_line.jpg" title="I am an IRONMAN" alt="Finish line Ironman de Nice 2024" width="300" height="500">
+                    <img src="Medaille.jpg" alt="Médaille !" width="300" height="500">
+                    <figcaption>Finish Line Ironman 2024</figcaption>
+                </figure>
+
+                <p>J'ai également d'autres hobbies comme l'entrepreneuriat, les sciences (mathématiques et physiques).</p>
+
+                <p>J'ai également un chat noir (pour moi cela porte chance haha)</p>
+                <figure>
+                    <img src="Happy.jpeg" alt="Happy la bête des Vosges" width="300">
+                    <figcaption>Bonjour ! Je suis Happy Miaou 🐈</figcaption>
+                </figure>
+            </section>
+            
+            <hr>
+
+            <section id="autres">
+                <h2>Autres</h2>
+                <ul>
+                    <li>Langues :
+                        <ul>
+                            <li><em>Français</em> : langue maternelle</li>
+                            <li><em>Anglais</em> : compétence professionnelle</li>
+                            <li><em>Vietnamien</em> : langue maternelle</li>
+                        </ul>
+                    </li>
+                    <li>Permis B 🚗</li>
+                    <li>Permis A 🏍</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- exo 2.2 : vidéo -->
+            <section id="video" style="text-align: center; margin-bottom: 30px;">
+                <h2>Vidéo</h2>
+                <video style="width: 100%; max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+            </section>
+
+            <hr>
+            
+            <section id="opendata">
+                <h2>Mes régions de mobilité</h2>
+                <p>Cliquez pour charger la liste des régions depuis l'API officielle du Gouvernement.</p>
+                <button id="btn-regions" style="padding: 10px 20px; cursor: pointer; font-weight: bold; background-color: #0056b3; color: white; border: none; border-radius: 5px;">
+                    Afficher les régions
+                </button>
+                
+                <div id="zone-donnees" style="margin-top: 15px;"></div>
+            </section>
+
+        </div>
+
+        <div id="footer">
+            <p><u><strong>Contact</strong></u> :</p>
+            <ul>
+                <li>Email 📧: <a href="mailto:thien-thanh.nguyen@hotmail.fr">thien-thanh.nguyen@hotmail.fr</a></li>
+                <li>Téléphone 📱: 06 37 55 64 03</li>
+                <li>Adresse 🏠: 65 Chemin du Coteau 57100 Thionville <a href="https://maps.app.goo.gl/HkhhZXBoajNpypkQA" target="_blank">Voir sur la carte</a></li>
+            </ul>
+            <p>Suivez-moi sur <a href="https://www.linkedin.com/in/thanh-nguyen-71548b7b/" target="_blank">LinkedIn</a></p>
+        </div>
+
+    </div>
+
+    <!-- bloc chatbot -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Discutez avec moi !
+            <i id="chat-icon-bulle" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <div id="chatbox">
+                             <p id="chat-timestamp"></p> <p id="botStarterMessage" class="botText"><span>Chargement...</span></p>
+                        </div>
+
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg" placeholder="Appuyez sur 'Entrée'">
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon-send" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom"><p></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript (Dark Mode, Open Data et Chatbot) -->
+    <script>
+        //dark mode
+        let boutonTheme = document.getElementById("btn-theme");
+        let corpsPage = document.body;
+
+        boutonTheme.addEventListener("click", function() {
+            corpsPage.classList.toggle("dark-mode");
+
+            if (corpsPage.classList.contains("dark-mode")) {
+                boutonTheme.textContent = "Revenir au Mode Clair";
+            } else {
+                boutonTheme.textContent = "Passer en Mode Sombre";
+            }
+        });
+
+        //API open data
+        const btnRegions = document.getElementById('btn-regions');
+        const zoneDonnees = document.getElementById('zone-donnees');
+
+        btnRegions.addEventListener('click', function() {
+            zoneDonnees.innerHTML = "<p><em>Chargement des données depuis l'API...</em></p>";
+
+            fetch('https://geo.api.gouv.fr/regions')
+                .then(function(reponse) {
+                    return reponse.json(); 
+                })
+                .then(function(data) {
+                    let tableau = "<table style='border-collapse: collapse; width: 100%; text-align: left; margin-top: 10px; background-color: white; color: black;'>";
+                    tableau += "<tr style='background-color: #ddd;'><th>Code</th><th>Nom de la région</th></tr>";
+
+                    for(let i = 0; i < data.length; i++) {
+                        tableau += "<tr>";
+                        tableau += "<td style='padding: 8px; border: 1px solid #ccc;'>" + data[i].code + "</td>";
+                        tableau += "<td style='padding: 8px; border: 1px solid #ccc;'>" + data[i].nom + "</td>";
+                        tableau += "</tr>";
+                    }
+                    tableau += "</table>";
+
+                    zoneDonnees.innerHTML = tableau;
+                })
+                .catch(function(erreur) {
+                    zoneDonnees.innerHTML = "<p style='color:red;'>Erreur : impossible de charger l'API.</p>";
+                });
+        });
+
+        //chatbot
+        var coll = document.getElementsByClassName("collapsible");
+
+        for (let i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        function getTime() {
+            let today = new Date();
+            let hours = today.getHours();
+            let minutes = today.getMinutes();
+
+            if (hours < 10) { hours = "0" + hours; }
+            if (minutes < 10) { minutes = "0" + minutes; }
+            
+            return hours + ":" + minutes;
+        }
+
+        function firstBotMessage() {
+            let firstMessage = "Bonjour ! Je suis l'assistant virtuel. Avez-vous une question sur le parcours de Thanh ?";
+            document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+            let time = getTime();
+            $("#chat-timestamp").append(time);
+            document.getElementById("userInput").scrollIntoView(false);
+        }
+
+        firstBotMessage();
+
+        function getBotResponse(question) {
+            question = question.toLowerCase();
+            if (question.includes("bonjour") || question.includes("salut")) {
+                return "Bonjour ! Comment puis-je vous aider aujourd'hui ?";
+            } else if (question.includes("bonsoir")) {
+                return "Bonsoir ! Avez-vous besoin d'informations sur mon CV ?";
+            } else if (question.includes("experience") || question.includes("travail") || question.includes("bil")) {
+                return "Je travaille actuellement comme Senior Trader à la BIL (Banque Internationale à Luxembourg).";
+            } else if (question.includes("sport") || question.includes("ironman") || question.includes("passion")) {
+                return "Le sport est ma grande passion ! J'ai notamment terminé l'Ironman de Nice.";
+            } else if (question.includes("etude") || question.includes("formation") || question.includes("licence")) {
+                return "J'ai un Master en Finance et je suis actuellement en L1 Informatique à l'IED Paris 8.";
+            } else if (question.includes("contact") || question.includes("email") || question.includes("mail")) {
+                return "Vous pouvez me contacter directement à : thien-thanh.nguyen@hotmail.fr";
+            } else if (question.includes("chat") || question.includes("animal") || question.includes("happy")) {
+                return "J'ai un chat noir qui s'appelle Happy. Pour moi, ça porte chance !";
+            } else {
+                return "Désolé, je ne comprends pas. Essayez de me parler d'expérience, d'études, de sport ou de contact ! SVP";
+            }
+        }
+
+        function getHardResponse(userText) {
+            let botResponse = getBotResponse(userText);
+            let botHTML = '<p class="botText"><span>' + botResponse + '</span></p>';
+            $("#chatbox").append(botHTML);
+            document.getElementById("chat-bar-bottom").scrollIntoView(true);
+        }
+
+        function getResponse() {
+            let userText = $("#textInput").val().trim();
+            if (userText === "") {
+                return;
+            }
+
+            let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+            setTimeout(() => {
+                getHardResponse(userText);
+            }, 500);
+        }
+
+        function sendButton() {
+            getResponse();
+        }
+
+        $("#textInput").keypress(function (e) {
+            if (e.which == 13) {
+                getResponse();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -24,22 +24,27 @@ if (isset($_POST['nom'])) {
     //on nettoie les données
     $nom = nettoyer($_POST['nom']);
     $prenom = nettoyer($_POST['prenom']);
-    $pseudo_github = nettoyer($_POST['pseudo_github']);
+    $email = nettoyer($_POST['email']);
     $date_anniversaire = nettoyer($_POST['date_anniversaire']);
     $note = nettoyer($_POST['note']);
     $message = nettoyer($_POST['message']);
+
+    //sécurité supplémentaire pour l'email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $email = "Format email invalide"; 
+    }
     
     //on génère la date du jour avec PHP
     $date_visite = date('Y-m-d');
 
     //requête préparée pour insérer dans la table
-    $requete = $bdd->prepare('INSERT INTO livre_dor(nom, prenom, pseudo_github, date_anniversaire, note, message, date_visite) VALUES(:nom, :prenom, :pseudo, :anniv, :note, :msg, :date_v)');
+    $requete = $bdd->prepare('INSERT INTO livre_dor(nom, prenom, email, date_anniversaire, note, message, date_visite) VALUES(:nom, :prenom, :email, :anniv, :note, :msg, :date_v)');
     
     //on exécute en liant nos variables (Syntaxe classique)
     $requete->execute(array(
         'nom' => $nom,
         'prenom' => $prenom,
-        'pseudo' => $pseudo_github,
+        'email' => $email,
         'anniv' => $date_anniversaire,
         'note' => $note,
         'msg' => $message,
